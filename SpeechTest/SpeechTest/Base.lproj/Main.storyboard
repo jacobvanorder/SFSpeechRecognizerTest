@@ -16,7 +16,7 @@
                         <viewControllerLayoutGuide type="bottom" id="eVh-hc-7wn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="eje-9Q-Y8w">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -26,24 +26,40 @@
             </objects>
             <point key="canvasLocation" x="201" y="568"/>
         </scene>
-        <!--Item 1-->
+        <!--AVAudioEngine-->
         <scene sceneID="FMA-G3-Uwn">
             <objects>
-                <viewController id="Wp9-yp-mmt" sceneMemberID="viewController">
+                <viewController id="Wp9-yp-mmt" customClass="SpeechWithAVAudioEngineViewController" customModule="SpeechTest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="biH-zn-CjN"/>
                         <viewControllerLayoutGuide type="bottom" id="erI-3o-XCl"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="FlI-eM-dfN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Talk into the iPad" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNO-Qs-WpL">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="erI-3o-XCl" firstAttribute="top" secondItem="GNO-Qs-WpL" secondAttribute="bottom" constant="-29" id="1B0-Ue-eeZ"/>
+                            <constraint firstItem="GNO-Qs-WpL" firstAttribute="top" secondItem="biH-zn-CjN" secondAttribute="bottom" constant="8" id="23g-ex-0Sf"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="GNO-Qs-WpL" secondAttribute="leading" id="FDv-xx-ZCA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GNO-Qs-WpL" secondAttribute="trailing" id="Gpl-5u-5B5"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="uRl-6P-GUq"/>
+                    <tabBarItem key="tabBarItem" title="AVAudioEngine" id="uRl-6P-GUq"/>
+                    <connections>
+                        <outlet property="resultLabel" destination="GNO-Qs-WpL" id="ezZ-bv-2vn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v7A-q7-NDf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="201" y="-87"/>
+            <point key="canvasLocation" x="200.00000000000003" y="-87.228260869565219"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="zcu-Zt-u1H">
@@ -73,7 +89,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Talk into the iPad" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5H-Wk-opI">

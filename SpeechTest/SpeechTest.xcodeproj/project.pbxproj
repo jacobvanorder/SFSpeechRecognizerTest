@@ -12,6 +12,7 @@
 		764078491D188FBD00320DF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 764078481D188FBD00320DF6 /* Assets.xcassets */; };
 		7640784C1D188FBD00320DF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7640784A1D188FBD00320DF6 /* LaunchScreen.storyboard */; };
 		764078541D1D680A00320DF6 /* SpeechWithAVFoundationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764078531D1D680A00320DF6 /* SpeechWithAVFoundationViewController.swift */; };
+		764078591D1EEE6600320DF6 /* SpeechWithAVAudioEngineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764078581D1EEE6600320DF6 /* SpeechWithAVAudioEngineViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		7640784B1D188FBD00320DF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7640784D1D188FBD00320DF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		764078531D1D680A00320DF6 /* SpeechWithAVFoundationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechWithAVFoundationViewController.swift; sourceTree = "<group>"; };
+		764078581D1EEE6600320DF6 /* SpeechWithAVAudioEngineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechWithAVAudioEngineViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +57,22 @@
 			isa = PBXGroup;
 			children = (
 				764078411D188FBD00320DF6 /* AppDelegate.swift */,
-				764078531D1D680A00320DF6 /* SpeechWithAVFoundationViewController.swift */,
+				764078571D1ED81000320DF6 /* View Controller */,
 				764078451D188FBD00320DF6 /* Main.storyboard */,
 				764078481D188FBD00320DF6 /* Assets.xcassets */,
 				7640784A1D188FBD00320DF6 /* LaunchScreen.storyboard */,
 				7640784D1D188FBD00320DF6 /* Info.plist */,
 			);
 			path = SpeechTest;
+			sourceTree = "<group>";
+		};
+		764078571D1ED81000320DF6 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				764078531D1D680A00320DF6 /* SpeechWithAVFoundationViewController.swift */,
+				764078581D1EEE6600320DF6 /* SpeechWithAVAudioEngineViewController.swift */,
+			);
+			name = "View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				764078591D1EEE6600320DF6 /* SpeechWithAVAudioEngineViewController.swift in Sources */,
 				764078541D1D680A00320DF6 /* SpeechWithAVFoundationViewController.swift in Sources */,
 				764078421D188FBD00320DF6 /* AppDelegate.swift in Sources */,
 			);

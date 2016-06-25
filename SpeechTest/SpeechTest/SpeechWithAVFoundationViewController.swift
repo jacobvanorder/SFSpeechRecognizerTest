@@ -14,12 +14,12 @@ let USE_DELEGATE_METHODS: Bool = false
 
 class SpeechWithAVFoundationViewController: UIViewController {
     
-    let session = AVCaptureSession()
-    let output = AVCaptureAudioDataOutput()
-    var device: AVCaptureDeviceInput!
+    private let session = AVCaptureSession()
+    private let output = AVCaptureAudioDataOutput()
+    private var device: AVCaptureDeviceInput!
     
-    let recognizer = SFSpeechRecognizer()
-    let request = SFSpeechAudioBufferRecognitionRequest()
+    private let recognizer = SFSpeechRecognizer()
+    private let request = SFSpeechAudioBufferRecognitionRequest()
     
     @IBOutlet var resultLabel: UILabel!
     
