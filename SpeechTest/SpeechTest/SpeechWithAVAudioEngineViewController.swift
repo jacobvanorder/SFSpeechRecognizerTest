@@ -14,6 +14,7 @@ class SpeechWithAVAudioEngineViewController: UIViewController {
     private let recognizer = SFSpeechRecognizer()
     private var request: SFSpeechAudioBufferRecognitionRequest?
     private var task: SFSpeechRecognitionTask?
+    private var inputNode: AVAudioInputNode?
     
     private let audioEngine = AVAudioEngine()
 
@@ -41,6 +42,15 @@ class SpeechWithAVAudioEngineViewController: UIViewController {
         }
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        audioEngine.stop()
+        inputNode?.removeTap(onBus: 0)
+        
+        request = nil
+        task = nil
+    }
+    
     func startRecording() throws {
         let audioSession = AVAudioSession.sharedInstance()
         try audioSession.setCategory(AVAudioSessionCategoryRecord)
@@ -48,7 +58,9 @@ class SpeechWithAVAudioEngineViewController: UIViewController {
         
         request = SFSpeechAudioBufferRecognitionRequest()
         
-        guard let inputNode = audioEngine.inputNode else { return }
+        inputNode = audioEngine.inputNode
+        
+        guard let checkedInputNode = inputNode  else { return }
         
         request?.shouldReportPartialResults = true
         
@@ -60,10 +72,13 @@ class SpeechWithAVAudioEngineViewController: UIViewController {
                 self.resultLabel.text = result.bestTranscription.formattedString
                 isDone = result.isFinal
             }
+            else if let error = optionalError {
+                self.resultLabel.text = "\(error.localizedDescription)"
+            }
             
             if isDone {
                 self.audioEngine.stop()
-                inputNode.removeTap(onBus: 0)
+                self.inputNode?.removeTap(onBus: 0)
                 
                 self.request = nil
                 self.task = nil
@@ -71,8 +86,8 @@ class SpeechWithAVAudioEngineViewController: UIViewController {
             
         })
         
-        let recordingFormat = inputNode.outputFormat(forBus: 0)
-        inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) {
+        let recordingFormat = checkedInputNode.outputFormat(forBus: 0)
+        checkedInputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) {
             (buffer: AVAudioPCMBuffer, audioTime: AVAudioTime) in
             self.request?.append(buffer)
         }

@@ -10,7 +10,7 @@
         <!--Recorded-->
         <scene sceneID="6Ds-58-5M3">
             <objects>
-                <viewController id="QmX-TT-tYq" sceneMemberID="viewController">
+                <viewController id="QmX-TT-tYq" customClass="SpeechWithPrerecordedAudioViewController" customModule="SpeechTest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xim-Ru-LzM"/>
                         <viewControllerLayoutGuide type="bottom" id="eVh-hc-7wn"/>
@@ -18,9 +18,25 @@
                     <view key="view" contentMode="scaleToFill" id="eje-9Q-Y8w">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Talk into the iPad" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMx-qk-P0N">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZMx-qk-P0N" firstAttribute="leading" secondItem="eje-9Q-Y8w" secondAttribute="leadingMargin" id="DPN-as-qih"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="ZMx-qk-P0N" secondAttribute="bottom" id="S6P-pM-vpw"/>
+                            <constraint firstItem="ZMx-qk-P0N" firstAttribute="trailing" secondItem="eje-9Q-Y8w" secondAttribute="trailingMargin" id="Sq3-rB-Tcx"/>
+                            <constraint firstItem="ZMx-qk-P0N" firstAttribute="top" secondItem="xim-Ru-LzM" secondAttribute="bottom" id="x6A-Yx-UQ4"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Recorded" id="Yau-c6-zxz"/>
+                    <connections>
+                        <outlet property="resultLabel" destination="ZMx-qk-P0N" id="6f2-XW-vdQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fSs-yZ-Gwo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

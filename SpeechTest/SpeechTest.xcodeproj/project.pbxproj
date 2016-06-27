@@ -13,6 +13,8 @@
 		7640784C1D188FBD00320DF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7640784A1D188FBD00320DF6 /* LaunchScreen.storyboard */; };
 		764078541D1D680A00320DF6 /* SpeechWithAVFoundationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764078531D1D680A00320DF6 /* SpeechWithAVFoundationViewController.swift */; };
 		764078591D1EEE6600320DF6 /* SpeechWithAVAudioEngineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764078581D1EEE6600320DF6 /* SpeechWithAVAudioEngineViewController.swift */; };
+		7640785B1D21B16C00320DF6 /* SpeechWithPrerecordedAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7640785A1D21B16C00320DF6 /* SpeechWithPrerecordedAudioViewController.swift */; };
+		7640785F1D21B64A00320DF6 /* test.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 7640785E1D21B64600320DF6 /* test.m4a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		7640784D1D188FBD00320DF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		764078531D1D680A00320DF6 /* SpeechWithAVFoundationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechWithAVFoundationViewController.swift; sourceTree = "<group>"; };
 		764078581D1EEE6600320DF6 /* SpeechWithAVAudioEngineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechWithAVAudioEngineViewController.swift; sourceTree = "<group>"; };
+		7640785A1D21B16C00320DF6 /* SpeechWithPrerecordedAudioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechWithPrerecordedAudioViewController.swift; sourceTree = "<group>"; };
+		7640785E1D21B64600320DF6 /* test.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.m4a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		764078401D188FBD00320DF6 /* SpeechTest */ = {
 			isa = PBXGroup;
 			children = (
+				7640785E1D21B64600320DF6 /* test.m4a */,
 				764078411D188FBD00320DF6 /* AppDelegate.swift */,
 				764078571D1ED81000320DF6 /* View Controller */,
 				764078451D188FBD00320DF6 /* Main.storyboard */,
@@ -69,8 +74,9 @@
 		764078571D1ED81000320DF6 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				764078531D1D680A00320DF6 /* SpeechWithAVFoundationViewController.swift */,
 				764078581D1EEE6600320DF6 /* SpeechWithAVAudioEngineViewController.swift */,
+				7640785A1D21B16C00320DF6 /* SpeechWithPrerecordedAudioViewController.swift */,
+				764078531D1D680A00320DF6 /* SpeechWithAVFoundationViewController.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -136,6 +142,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7640785F1D21B64A00320DF6 /* test.m4a in Resources */,
 				7640784C1D188FBD00320DF6 /* LaunchScreen.storyboard in Resources */,
 				764078491D188FBD00320DF6 /* Assets.xcassets in Resources */,
 				764078471D188FBD00320DF6 /* Main.storyboard in Resources */,
@@ -150,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				764078591D1EEE6600320DF6 /* SpeechWithAVAudioEngineViewController.swift in Sources */,
+				7640785B1D21B16C00320DF6 /* SpeechWithPrerecordedAudioViewController.swift in Sources */,
 				764078541D1D680A00320DF6 /* SpeechWithAVFoundationViewController.swift in Sources */,
 				764078421D188FBD00320DF6 /* AppDelegate.swift in Sources */,
 			);
